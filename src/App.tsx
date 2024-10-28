@@ -9,6 +9,7 @@ import CovidTable from "./components/covid-table";
 import CovidPieChart from "./components/pie-chart";
 import IndiaMap from "./components/india-map";
 import TrendLineChart from "./components/trendline-chart";
+import "leaflet/dist/leaflet.css";
 
 const App: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -24,9 +25,7 @@ const App: React.FC = () => {
       <CovidTable />
       <CovidPieChart />
 
-      <div className="map-container">
-        <IndiaMap />
-      </div>
+      <div className="map-container">{/* <IndiaMap /> */}</div>
 
       <div className="chart-container">
         <TrendLineChart />
